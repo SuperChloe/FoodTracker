@@ -204,7 +204,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="changePic" destination="79x-3R-yhf" id="k4j-2o-loD"/>
                         <outlet property="picButton" destination="79x-3R-yhf" id="ark-1l-TYz"/>
                         <outlet property="picView" destination="gDD-am-y8A" id="dgX-P2-Xqj"/>
                         <outlet property="signupButton" destination="JWM-ek-kqs" id="aTz-9g-UKk"/>
