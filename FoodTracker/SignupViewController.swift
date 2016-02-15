@@ -13,6 +13,7 @@ import Bolts
 class SignupViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var picView: UIImageView!
     @IBOutlet weak var picButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
@@ -35,7 +36,10 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
     func signUp() {
         var user = PFUser()
         user.username = usernameField.text
-        user["profilePic"] = picView.image
+        user.password = passwordField.text
+        let imageData = UIImageJPEGRepresentation(picView.image!, 1.0)
+        let file = PFFile(data: imageData!)
+        user["profilePic"] = file
         
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
@@ -48,7 +52,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
-    // MARK: Image Picker
+// MARK: Buttons
 
     @IBAction func changePic(sender: UIButton) {
         imagePicker.allowsEditing = false
@@ -56,6 +60,12 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         presentViewController(imagePicker, animated: true, completion: nil)
     }
+    
+    @IBAction func pressedSignup(sender: UIButton) {
+        signUp()
+    }
+    
+    // MARK: Image Picker
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
