@@ -51,15 +51,22 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
     // MARK: Image Picker
 
     @IBAction func changePic(sender: UIButton) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .PhotoLibrary
         
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        self.picView.image = 
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            picView.contentMode = .ScaleAspectFit
+            picView.image = pickedImage
+        }
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        // Image picker cancelled
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
 }
