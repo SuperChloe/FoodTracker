@@ -19,6 +19,8 @@
 		89F51ACA1C726BF800531F96 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F51AC91C726BF800531F96 /* SystemConfiguration.framework */; };
 		89F51ACC1C726C0300531F96 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F51ACB1C726C0300531F96 /* libz.tbd */; };
 		89F51ACE1C726C1000531F96 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F51ACD1C726C1000531F96 /* libsqlite3.tbd */; };
+		89F51AD51C7280BC00531F96 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F51AD41C7280BC00531F96 /* ProfileViewController.swift */; };
+		89F51AD71C7280C800531F96 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F51AD61C7280C800531F96 /* SignupViewController.swift */; };
 		9E03022C5FB773304096A35E /* Pods_FoodTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8900B2E92EDD2DC5156E2E /* Pods_FoodTracker.framework */; };
 		CA1292781B150DF500303C8D /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1292771B150DF500303C8D /* RatingControl.swift */; };
 		CA1902E01B10E523000271C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1902DF1B10E523000271C4 /* AppDelegate.swift */; };
@@ -57,6 +59,8 @@
 		89F51AC91C726BF800531F96 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		89F51ACB1C726C0300531F96 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		89F51ACD1C726C1000531F96 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		89F51AD41C7280BC00531F96 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		89F51AD61C7280C800531F96 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A8073028A0E5356EE6EBEB74 /* Pods-FoodTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTracker/Pods-FoodTracker.release.xcconfig"; sourceTree = "<group>"; };
 		B23A53FF87D9D229A47952A5 /* Pods-FoodTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTracker/Pods-FoodTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		CA1292771B150DF500303C8D /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				CA1902E11B10E523000271C4 /* MealViewController.swift */,
 				CA1292771B150DF500303C8D /* RatingControl.swift */,
 				CA734E341B155077001A6F80 /* Meal.swift */,
+				89F51AD41C7280BC00531F96 /* ProfileViewController.swift */,
+				89F51AD61C7280C800531F96 /* SignupViewController.swift */,
 				CA1902E31B10E523000271C4 /* Main.storyboard */,
 				CA5D06021B162F2300095F0F /* MealTableViewController.swift */,
 				CA5D06001B162F2300095F0F /* MealTableViewCell.swift */,
@@ -334,8 +340,10 @@
 			files = (
 				CA734E351B155077001A6F80 /* Meal.swift in Sources */,
 				CA1902E21B10E523000271C4 /* MealViewController.swift in Sources */,
+				89F51AD71C7280C800531F96 /* SignupViewController.swift in Sources */,
 				CA1292781B150DF500303C8D /* RatingControl.swift in Sources */,
 				CA1902E01B10E523000271C4 /* AppDelegate.swift in Sources */,
+				89F51AD51C7280BC00531F96 /* ProfileViewController.swift in Sources */,
 				CA5D06031B162F2300095F0F /* MealTableViewController.swift in Sources */,
 				CA5D06011B162F2300095F0F /* MealTableViewCell.swift in Sources */,
 			);

@@ -1,0 +1,65 @@
+//
+//  SignupViewController.swift
+//  FoodTracker
+//
+//  Created by Chloe on 2016-02-15.
+//  Copyright © 2016 Apple Inc. All rights reserved.
+//
+
+import UIKit
+import Parse
+import Bolts
+
+class SignupViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var picView: UIImageView!
+    @IBOutlet weak var picButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
+    
+    let imagePicker = UIImagePickerController()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        imagePicker.delegate = self
+
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func signUp() {
+        var user = PFUser()
+        user.username = usernameField.text
+        user["profilePic"] = picView.image
+        
+        user.signUpInBackgroundWithBlock {
+            (succeeded: Bool, error: NSError?) -> Void in
+            if let error = error {
+                let errorString = error.userInfo["error"] as? NSString
+                //Show the errorString somewhere and let the user try again
+            } else {
+                //Segue to app
+            }
+        }
+    }
+    
+    // MARK: Image Picker
+
+    @IBAction func changePic(sender: UIButton) {
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        self.picView.image = 
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        // Image picker cancelled
+    }
+    
+}
