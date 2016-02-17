@@ -1,3 +1,3 @@
 # FoodTracker
-Food Tracker Apple tutorial, with Parse added on (LHL W5D1)
+Food Tracker Apple tutorial, with Parse added on (LHL W6D1)
 
